@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stack_component.name %>
+</p>
+
+<p>
+  <strong>Portfolio item:</strong>
+  <%= @stack_component.portfolio_item %>
+</p>
+
+<%= link_to 'Edit', edit_stack_component_path(@stack_component) %> |
+<%= link_to 'Back', stack_components_path %>

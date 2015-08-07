@@ -1,0 +1,27 @@
+<h1>Listing stack_components</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Portfolio item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stack_components.each do |stack_component| %>
+      <tr>
+        <td><%= stack_component.name %></td>
+        <td><%= stack_component.portfolio_item %></td>
+        <td><%= link_to 'Show', stack_component %></td>
+        <td><%= link_to 'Edit', edit_stack_component_path(stack_component) %></td>
+        <td><%= link_to 'Destroy', stack_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stack component', new_stack_component_path %>
