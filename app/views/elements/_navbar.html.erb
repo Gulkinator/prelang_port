@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to "My Application", defined?(root_path) ? root_path : "#", class: "navbar-brand" %>
+    <%= link_to "Lauren Gulkus", defined?(root_path) ? root_path : "#", class: "navbar-brand" %>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -26,10 +26,15 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Login", new_user_session_path %></li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><a class="hidden" href="#projects">Projects</a></li>
+          <li><a class="hidden" href="#consumer-products-projects">Consumer Product Projects <span class="sr-only">Consumer Product Projects</span></a></li>
+          <li><a class="hidden" href="#enterprise-products-projects">Enterprise Product Projects <span class="sr-only">Enterprise Product Projects</span></a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="https://gulkus.wufoo.com/forms/zohxfh017810c5/" target="_blank">Contact</a></li>
+          <li><a class="hidden" href="#social-media">Social Media<span class="sr-only">Social Media Links</span></a></li>
         <% end %>
       <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
+

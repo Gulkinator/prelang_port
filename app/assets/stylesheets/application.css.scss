@@ -35,3 +35,252 @@
 .form-user {
   max-width: 450px;
 }
+
+/* ==========================================================================
+   Universal Styles
+   ========================================================================== */
+    * {
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5;
+        color: #333;
+    }
+
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+/* ==========================================================================
+   Universal Wrapper Styles
+   ========================================================================== */
+    .wrapper {
+        width: 100%;
+    }
+    .inner {
+        width: 90%;
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 16px;
+    }
+
+
+
+/* ==========================================================================
+   Global Styles
+   ========================================================================== */
+
+/* Headings */
+
+    h1, h2, p {
+        margin: 16px 0 16px 0;
+        padding: 0;
+        color:#002F45;
+    }
+
+    h1 {
+        font-size: 64px;
+        color: #333;
+        padding: 25vh 0;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    
+    /* MOBILE SYTLES */
+    @media only screen and (max-width : 700px) {
+        h1 { font-size: 32px; padding: 10vh 0; }
+    }
+
+    h2 {
+        margin: 48px 0 16px 0;
+        font-size: 32px;
+        font-weight: 100;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+/* Links */
+    a {
+        text-decoration: none;
+        color: #FBBB29;
+    }
+    
+    main a:hover { 
+        color: #002F45;
+        text-decoration: none;
+        
+    }
+    
+    a:hover { color: #FBBB29;}
+
+/* Listing Styles */
+    ul {
+        margin: 16px 0 16px;
+        padding: 0 0 0 48px
+        
+    }
+    ul:after {
+        clear: both;
+        display: table;
+        content: '';
+    }
+    
+    li {
+        width: 33%;
+        float: left;
+    }
+    
+    footer li {
+        list-style:none;
+    }
+    
+    /* MOBILE SYTLES */
+    @media only screen and (max-width : 700px) {
+        li {
+            width: 100%;
+            float: none;
+        }
+    }
+    
+/* Helper Classes */
+
+    .clear { clear: both; }
+
+    .pull-left { margin-right: 40px;  }
+
+
+/* ==========================================================================
+   Nav Styles
+   ========================================================================== */
+    .navbar-default {
+        background: #002f45;
+        color: #def4ff;
+        border-radius: 0px;
+        margin-bottom:0px;
+    }
+    .navbar-toggle {
+        border-color: lime;
+    }
+    
+    nav .fa   {
+        color:#def4ff;
+    }
+    
+    .navbar-brand {
+        font-weight: 100;
+        text-transform: uppercase;
+        font-size: 24px;
+        letter-spacing: .05em;
+        color: #def4ff;
+        display: block;
+    }
+    
+    nav a  {
+        color:#def4ff;
+    }
+    nav > li > a:hover, .nav > li > a:focus   {
+        color:#FBBB29;
+        background:transparent;
+    }
+    
+/* ==========================================================================
+   Header Styles
+   ========================================================================== */
+    header {
+        color: #002F45;
+        text-align: center;
+        background: #DFE8EE url(https://cloud.githubusercontent.com/assets/10729186/8886338/0f6666f0-322e-11e5-831e-a1daa288bb21.png) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-ie-background-size: cover;
+        background-size: cover;
+    }
+    
+/* ==========================================================================
+   Main Styles
+   ========================================================================== */
+    main {
+        margin-bottom: 32px;
+    }
+
+    .thumbnail {
+    	background-color:#DFE8EE;
+    	border-color: transparent;
+    	border-radius: 0px;
+    	box-shadow:none;
+    	padding:1em;
+    }
+    
+   .thumbnail:hover {
+    	box-shadow: 0 12px 36px rgba(100, 100, 100, 0.7);
+    }
+     
+    .caption   {
+        color:#002F45;
+    }
+    
+    .coming-soon {
+        max-width:490px;
+        width:66%;
+        max-height:315px;
+        padding:3em;
+    }
+    
+    .about-link   {
+        color:#FBBB29;
+        font-variant:small-caps;
+        font-weight: bold;
+    }
+    
+    .about-link:hover   {
+        color:#002f45;
+        text-decoration:none;
+    }
+
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+    footer {
+        background: #002f45;
+        color: #def4ff;
+    }
+    
+    footer h3 {
+        float: left;
+        margin: 28px 0;
+        display: inline;
+        color:#def4ff;
+    }
+    
+    footer p {
+        float: left;
+        margin: 28px 0;
+        display: inline;
+        color:#def4ff;
+    }
+    
+    footer a   {
+        color:#def4ff;
+    }
+    
+    footer i {
+        color:#def4ff;
+    }
+    
+    footer i:hover  {
+        color:#FBBB29;
+    }
+    
+    /* MOBILE SYTLES */
+    @media only screen and (max-width : 700px) {
+        footer { text-align: center; }
+        footer img { float: none; margin: 16px 0; }
+        footer p {  float: none; margin: 16px 0; display: block;}
+    }
+

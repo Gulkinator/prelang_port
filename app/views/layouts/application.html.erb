@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PrelangPort</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lauren Gulkus</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-<meta name="viewport" content="width=device-width, initial-scale=1"/><!-- Prelang: Analytics / Google Analytics -->
-    <%= analytics_init if Rails.env.production? or Rails.env.development? %></head>
+  <meta content="Lauren Gulkus" name="author">
+  <meta content="The web development projects portfolio of Lauren Gulkus" name="description">
+  
+  <!-- Start Styles -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- End Styles -->
+  
+  <!-- Start Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,300,600" rel="stylesheet" type="text/css">
+  <!-- End Fonts -->
+</head>
 <body>
-<%= render partial: "elements/navbar" %>
-<%= bootstrap_flash %>
-
-
-<%= yield %>
+  <%= render partial: "elements/navbar" %>
+  <%= bootstrap_flash %>
+  
+  
+  <%= yield %>
+  
+  
+  
+  <%= render partial: "elements/footer" %>
 
 </body>
 </html>
