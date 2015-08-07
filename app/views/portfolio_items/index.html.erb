@@ -1,0 +1,31 @@
+<h1>Listing portfolio_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Link</th>
+      <th>Description</th>
+      <th>Img</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portfolio_items.each do |portfolio_item| %>
+      <tr>
+        <td><%= portfolio_item.name %></td>
+        <td><%= portfolio_item.link %></td>
+        <td><%= portfolio_item.description %></td>
+        <td><%= portfolio_item.img %></td>
+        <td><%= link_to 'Show', portfolio_item %></td>
+        <td><%= link_to 'Edit', edit_portfolio_item_path(portfolio_item) %></td>
+        <td><%= link_to 'Destroy', portfolio_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Portfolio item', new_portfolio_item_path %>

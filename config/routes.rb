@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :portfolio_items
+
   resources :stack_components
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
