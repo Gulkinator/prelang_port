@@ -1,6 +1,5 @@
-<h1>Editing stack_component</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @stack_component %> |
-<%= link_to 'Back', stack_components_path %>
+<%- model_class = StackComponents -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => StackComponents %></h1>
+</div>
+<%= render :partial => 'form' %>

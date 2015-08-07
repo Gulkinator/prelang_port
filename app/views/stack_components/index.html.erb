@@ -1,27 +1,36 @@
-<h1>Listing stack_components</h1>
-
-<table>
+<%- model_class = StackComponents -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => StackComponents %></h1>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Portfolio item</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
-
   <tbody>
-    <% @stack_components.each do |stack_component| %>
+    <% @stack_components.each do |stack_components| %>
       <tr>
-        <td><%= stack_component.name %></td>
-        <td><%= stack_component.portfolio_item %></td>
-        <td><%= link_to 'Show', stack_component %></td>
-        <td><%= link_to 'Edit', edit_stack_component_path(stack_component) %></td>
-        <td><%= link_to 'Destroy', stack_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= stack_components.id %></td>
+        <td><%= stack_components.name %></td>
+        <td><%=l stack_components.created_at, format: :long %></td>
+        <td>
+          <%= link_to stack_components_path(stack_components), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to stack_components_path(stack_components), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Stack component', new_stack_component_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_stack_components_path,
+            :class => 'btn btn-primary' %>

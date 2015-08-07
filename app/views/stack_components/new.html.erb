@@ -1,5 +1,6 @@
-<h1>New stack_component</h1>
+<%- model_class = StackComponents -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => StackComponents %></h1>
+</div>
+<%= render :partial => 'form' %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', stack_components_path %>
