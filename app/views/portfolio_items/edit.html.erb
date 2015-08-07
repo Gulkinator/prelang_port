@@ -1,6 +1,5 @@
-<h1>Editing portfolio_item</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @portfolio_item %> |
-<%= link_to 'Back', portfolio_items_path %>
+<%- model_class = PortfolioItem -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => PortfolioItem %></h1>
+</div>
+<%= render :partial => 'form' %>
