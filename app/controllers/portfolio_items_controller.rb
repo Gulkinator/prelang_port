@@ -1,8 +1,6 @@
 class PortfolioItemsController < ApplicationController
-  before_action :confirm_admin, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
-  
+
   # GET /portfolio_items
   # GET /portfolio_items.json
   def index
